@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Oxygen Cylinder Database</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+	<style>
+		body {
+			background: #f8f9fa;
+		}
+		.container {
+			max-width: 400px;
+			background-color: #fff;
+			border-radius: 5px;
+			box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+			padding: 20px;
+			margin: 0 auto;
+		}
+		h2 {
+			text-align: center;
+			margin-bottom: 20px;
+			color: #007bff;
+		}
+		.form-group label {
+			font-weight: bold;
+			color: #333;
+		}
+		.form-group input[type="text"],
+		.form-group input[type="password"],
+		.form-group input[type="number"] {
+			width: 100%;
+			padding: 10px;
+			border: 1px solid #ccc;
+			border-radius: 3px;
+			margin-bottom: 10px;
+		}
+		.button-container {
+			text-align: center;
+			margin-top: 20px;
+		}
+		.button-container button[type="submit"] {
+			padding: 10px 20px;
+			background-color: #007bff;
+			border: none;
+			border-radius: 3px;
+			color: #fff;
+			cursor: pointer;
+			font-size: 16px;
+		}
+		.button-container button[type="submit"]:hover {
+			background-color: #0062cc;
+			box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+		}
+	</style>
+</head>
+<body>
+	<video autoplay muted loop id="background-video">
+  		<source src="" type="video/mp4">
+	</video>
+
+	<div class="container">
+		<h2>Oxygen Cylinder Database</h2>
+		<form action="/update-cylinder-count" method="post">
+			<div class="form-group">
+				<label for="name">Doctor's Name:</label>
+				<input type="text" id="name" name="namep">
+			</div>
+			<div class="form-group">
+				<label for="hospitalId">Hospital ID:</label>
+				<input type="text" id="hospitalId" name="hospitalId">
+			</div>
+			<div class="form-group">
+				<label for="password">Password:</label>
+				<input type="password" id="password" name="password">
+			</div>
+			<div class="form-group">
+				<label for="cylinderCount">Cylinder Count:</label>
+				<input type="number" id="cylinderCount" name="cylinderCount">
+			</div>
+			<div class="button-container">
+				<button type="submit" class="btn btn-primary">
+					<i class="fas fa-upload"></i> Update Cylinder Count
+				</button>
+			</div>
+		</form>
+		<p id="response"></p>
+	</div>
+
+	<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+	<script src="pro.js"></script>
+</body>
+</html>
+
+
+
+
